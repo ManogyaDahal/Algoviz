@@ -7,7 +7,6 @@
 #include <thread>
 #include <chrono>
 
-// Global variables
 const int window_width = 800;
 const int window_height = 600;
 
@@ -16,9 +15,8 @@ bool sorting = false;
 int array_size = 50;
 int compare_index1 = -1;
 int compare_index2 = -1;
-int delay = 100; // delay in milliseconds for visualization
+int delay = 100; 
 
-// Function prototypes
 void generateArray(int size);
 void drawArray(sf::RenderWindow& window);
 void insertionSort();
@@ -41,7 +39,6 @@ int main() {
 
         ImGui::SFML::Update(window, deltaClock.restart());
 
-        // ImGui window for controls
         ImGui::Begin("Controls");
         if (ImGui::Button("Generate Array")) {
             generateArray(array_size);
@@ -75,9 +72,9 @@ void drawArray(sf::RenderWindow& window) {
 	if(array.empty()) return;
 
 	sf::Vector2u winSize = window.getSize();
-    int bar_width = winSize.x / array.size(); // dynamically calculate bar width
-	int min_height = 10; // Minimum bar height
-    int max_height = winSize.y - 50; // Maximum bar height
+    int bar_width = winSize.x / array.size(); 
+	int min_height = 10;
+    int max_height = winSize.y - 50;
     int min_value = *std::min_element(array.begin(), array.end());
     int max_value = *std::max_element(array.begin(), array.end());
     int range = max_value - min_value;
@@ -108,12 +105,10 @@ void insertionSort() {
             array[j + 1] = array[j];
             j = j - 1;
 
-            // Update the visualizer
             std::this_thread::sleep_for(std::chrono::milliseconds(delay));
         }
         array[j + 1] = key;
 
-        // Update the visualizer
         std::this_thread::sleep_for(std::chrono::milliseconds(delay));
     }
     sorting = false;
