@@ -192,3 +192,6 @@ void insertionSort() {
     compare_index1 = compare_index2 = -1;
 }
 
+
+
+
