@@ -66,7 +66,8 @@ void generateArray(int size) {
     array.clear();
     array.resize(size);
     std::generate(array.begin(), array.end(), []() { return rand() % 91 + 10; });
-	isSorted = false;
+//    snprintf(userInputArray, sizeof(userInputArray), "Generated array of size %d", size);
+    isSorted = false; 
 }
 
 void drawArray(sf::RenderWindow& window) {
@@ -201,6 +202,7 @@ void generateArrayFromInput(const std::vector<int>& inputArray) {
 }
 
 void insertionSort() {
+    isSorted = false; 
     for (int i = 1; i < array.size(); ++i) {
         int key = array[i];
         int j = i - 1;
@@ -220,9 +222,11 @@ void insertionSort() {
 
         std::this_thread::sleep_for(std::chrono::milliseconds(delay));
     }
+
     sorting = false;
     compare_index1 = compare_index2 = -1;
 	isSorted = true;
+
 }
 
 
