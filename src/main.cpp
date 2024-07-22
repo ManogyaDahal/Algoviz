@@ -94,8 +94,9 @@ void drawArray(sf::RenderWindow& window) {
         } else {
             bar.setFillColor(sf::Color::White);
         }
+
 		if (isSorted == true){
-			bar.setFillColor(sf::Color::Cyan);
+			bar.setFillColor(sf::Color::Cyan);//after sorting is complete
 		}
 
         window.draw(bar);
