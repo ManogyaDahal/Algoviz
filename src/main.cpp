@@ -22,6 +22,8 @@ int compare_index2 = -1;
 int delay = 100;
 char swapInfo[128] = ""; // Array to store swap information
 char userInputArray[256] = ""; // Array to store user input array
+			      
+sf::Font font; 
 
 void generateArray(int size);
 void drawArray(sf::RenderWindow& window);
@@ -34,6 +36,11 @@ int main() {
     sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Algoviz - Sorting Algorithm Visualizer");
     window.setFramerateLimit(60);
     ImGui::SFML::Init(window);
+
+    if(!font.loadFromFile("font/GeistMonoNerdFontMono-UltraBlack.otf")) {
+	    std::cerr <<"Failed to load font" <<std::endl; 
+	    return -1;
+    }
 
     sf::Clock deltaClock;
 
@@ -82,6 +89,11 @@ void drawArray(sf::RenderWindow& window) {
     int max_value = *std::max_element(array.begin(), array.end());
     float range = static_cast<float>(max_value - min_value);
 
+    sf::Text valueText;
+    valueText.setFont(font); 
+    valueText.setCharacterSize(16);  
+    valueText.setFillColor(sf::Color::Black); 
+
     for (int i = 0; i < numBars; ++i) {
         float normalized_height = min_height + ((static_cast<float>(array[i]) - min_value) / range) * (max_height - min_height);
         float bar_height = std::max(static_cast<float>(min_height), std::min(static_cast<float>(max_height), normalized_height));
@@ -100,6 +112,9 @@ void drawArray(sf::RenderWindow& window) {
 		}
 
         window.draw(bar);
+	valueText.setString(std::to_string(array[i])); 
+	valueText.setPosition( i * bar_width + margin +2, winSize.y - bar_height -margin +2); 
+	window.draw(valueText); 
     }
 }
 
