@@ -8,7 +8,10 @@
 #include <chrono>
 #include <iostream>
 #include <sstream>
+#include <mutex>
 
+const unsigned int MIN_WINDOW_WIDTH = 1902;
+const unsigned int MIN_WINDOW_HEIGHT = 1080;
 const int window_width = 1902;
 const int window_height = 1080;
 const int margin = 25; 
@@ -22,20 +25,35 @@ int compare_index2 = -1;
 int delay = 100;
 char swapInfo[128] = ""; // Array to store swap information
 char userInputArray[256] = ""; // Array to store user input array
-			      
+int selectedSort = 0;
+
+std::mutex mtx;
+
 sf::Font font; 
 
 void generateArray(int size);
 void drawArray(sf::RenderWindow& window);
 void insertionSort();
-void displayInfoBoxes(sf::RenderWindow& window);
+void ShowMenuBar(bool* p_open);
 void displayUserInputBox(sf::RenderWindow& window);
+void displaySwapInfoBox(sf::RenderWindow& window);
+void displayTimeComplexityBox(sf::RenderWindow& window);
 void generateArrayFromInput(const std::vector<int>& inputArray);
+void quickSort(int low, int high);
+int partition(int low, int high);
+void timSort();
+void insertionSort(int left, int right);
+void merge(int left, int mid, int right);
+
 
 int main() {
     sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Algoviz - Sorting Algorithm Visualizer");
     window.setFramerateLimit(60);
-    ImGui::SFML::Init(window);
+
+	if (!ImGui::SFML::Init(window)) {
+		std::cerr << "Failed to initialize ImGui-SFML." << std::endl;
+		return -1;
+	}
 
     if(!font.loadFromFile("font/GeistMonoNerdFontMono-UltraBlack.otf")) {
 	    std::cerr <<"Failed to load font" <<std::endl; 
@@ -43,38 +61,63 @@ int main() {
     }
 
     sf::Clock deltaClock;
+	bool showMenuBar = true;
 
-    while (window.isOpen()) {
-        sf::Event event;
-        while (window.pollEvent(event)) {
-            ImGui::SFML::ProcessEvent(event);
-            if (event.type == sf::Event::Closed) {
-                window.close();
-            }
-        }
+	generateArray(array_size);
 
-        ImGui::SFML::Update(window, deltaClock.restart());
+	while (window.isOpen())
+	{
+		sf::Event event;
+		while (window.pollEvent(event))
+		{
+			ImGui::SFML::ProcessEvent(event);
 
-        // Display boxes on the right side
-        displayUserInputBox(window);
-        displayInfoBoxes(window);
+			if (event.type == sf::Event::Closed)
+				window.close();
 
-        window.clear();
-        drawArray(window);
-        ImGui::SFML::Render(window);
-        window.display();
-    }
+			if (event.type == sf::Event::Resized)
+			{
+				if (event.size.width < MIN_WINDOW_WIDTH || event.size.height < MIN_WINDOW_HEIGHT)
+				{
+					unsigned int newWidth = event.size.width < MIN_WINDOW_WIDTH ? MIN_WINDOW_WIDTH : event.size.width;
+					unsigned int newHeight = event.size.height < MIN_WINDOW_HEIGHT ? MIN_WINDOW_HEIGHT : event.size.height;
+					window.setSize(sf::Vector2u(newWidth, newHeight));
+				}
+			}
+		}
 
-    ImGui::SFML::Shutdown();
-    return 0;
+		ImGui::SFML::Update(window, deltaClock.restart());
+
+		if (showMenuBar)
+		{
+			ShowMenuBar(&showMenuBar);
+		}
+
+		displayUserInputBox(window);
+		displaySwapInfoBox(window);
+		displayTimeComplexityBox(window);
+
+		window.clear();
+		drawArray(window);
+		ImGui::SFML::Render(window);
+		window.display();
+	}
+
+	ImGui::SFML::Shutdown();
+
+	return 0;
 }
 
 void generateArray(int size) {
     array.clear();
     array.resize(size);
     std::generate(array.begin(), array.end(), []() { return rand() % 91 + 10; });
-//    snprintf(userInputArray, sizeof(userInputArray), "Generated array of size %d", size);
     isSorted = false; 
+}
+
+void generateArrayFromInput(const std::vector<int>& inputArray) {
+    array = inputArray;
+    array_size = array.size();
 }
 
 void drawArray(sf::RenderWindow& window) {
@@ -146,104 +189,154 @@ void drawArray(sf::RenderWindow& window) {
     }
 }
 
-void displayInfoBoxes(sf::RenderWindow& window) {
-    	
-	sf::Vector2u winSize = window.getSize();
+void ShowMenuBar(bool* p_open)
+{
+	ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x, 60), ImGuiCond_Always);
+	ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond_Always);
+	if (ImGui::Begin("Menu Bar", p_open, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse))
+	{
+		ImVec2 windowSize = ImGui::GetWindowSize();
+		float padding = 20.0f;
+		float margin = 20.0f;
+		float itemWidth = 150.0f;
+		float itemHeight = 30.0f;
+		float buttonWidth = 100.0f;
+		float totalItemsWidth = itemWidth * 3 + buttonWidth * 2;
 
-    // Box for swap information
-    sf::RectangleShape swapBox(sf::Vector2f(170, 175));
-    swapBox.setPosition(winSize.x - 190, 210);
-    swapBox.setFillColor(sf::Color(200, 200, 200));
-    swapBox.setOutlineThickness(1.f);
-    swapBox.setOutlineColor(sf::Color::Black);
-    window.draw(swapBox);
+		float remainingWidth = windowSize.x - totalItemsWidth - 2 * margin;
+		float spacing = remainingWidth / 6.0f;
 
-    // Display swap information
-    ImGui::SetNextWindowPos(ImVec2(winSize.x - 185, 215));
-    ImGui::SetNextWindowSize(ImVec2(160, 165));
-    ImGui::Begin("Swap Info", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
-    ImGui::TextUnformatted("Swap Information:");
-    ImGui::TextUnformatted(swapInfo);
-    ImGui::End();
+		ImGui::SetCursorPos(ImVec2(margin, (60 - itemHeight) / 2));
+		ImGui::Text("SortVisualizer");
 
-    // Box for time complexity information
-    sf::RectangleShape timeComplexityBox(sf::Vector2f(170, 175));
-    timeComplexityBox.setPosition(winSize.x - 190, 400);
-    timeComplexityBox.setFillColor(sf::Color(200, 200, 00));
-    timeComplexityBox.setOutlineThickness(1.f);
-    timeComplexityBox.setOutlineColor(sf::Color::Black);
-    window.draw(timeComplexityBox);
+		ImGui::SameLine();
+		ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + spacing);
+		const char* items[] = { "Quick Sort", "Insertion Sort", "Tim Sort" };
+		ImGui::PushItemWidth(itemWidth);
+		ImGui::Combo("##Combo", &selectedSort, items, IM_ARRAYSIZE(items));
+		ImGui::PopItemWidth();
 
-    // Display time complexity information
-    ImGui::SetNextWindowPos(ImVec2(winSize.x - 185, 405));
-    ImGui::SetNextWindowSize(ImVec2(160, 170));
-    ImGui::Begin("Complexity Information", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
-    ImGui::TextUnformatted("Time Complexity:");
-    ImGui::Text("O(n^2)"); // Example for insertion sort
-    ImGui::TextUnformatted("Space Complexity:");
-    ImGui::Text("O(1)"); // Example for insertion sort
-    ImGui::End();
+		ImGui::SameLine();
+		ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + itemWidth + spacing * 2);
+		ImGui::Text("Delay:");
+		ImGui::SameLine();
+		ImGui::PushItemWidth(100);
+		ImGui::SliderInt("##delay", &delay, 1, 1000);
+		ImGui::PopItemWidth();
+
+		ImGui::SameLine();
+		ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + itemWidth * 2 + spacing * 3);
+		if (ImGui::Button("Randomize", ImVec2(buttonWidth, itemHeight))) {
+			generateArray(array_size);
+		}
+
+		ImGui::SameLine();
+		ImGui::SetCursorPosX(windowSize.x - margin - buttonWidth);
+		if (ImGui::Button("Start", ImVec2(buttonWidth, itemHeight))) {
+			sorting = true;
+			//            delay = 3000 / array_size;
+			std::thread sortThread;
+			if (selectedSort == 0) {
+				sortThread = std::thread(quickSort, 0, array.size() - 1);
+			} else if (selectedSort == 1) {
+				sortThread = std::thread([]{insertionSort();});
+			} else if (selectedSort == 2) {
+				sortThread = std::thread(timSort);
+			}
+			sortThread.detach();
+		}
+
+		ImGui::SetCursorPos(ImVec2(margin, (60 - itemHeight) / 2 + itemHeight + 10));
+	}
+	ImGui::End();
 }
+
 
 void displayUserInputBox(sf::RenderWindow& window) {
-    sf::Vector2u winSize = window.getSize();
+	sf::Vector2u winSize = window.getSize();
 
-    // Box for user input array
-    sf::RectangleShape userInputBox(sf::Vector2f(170, 175));
-    userInputBox.setPosition(winSize.x - 190, 20);
-    userInputBox.setFillColor(sf::Color(200, 200, 200));
-    userInputBox.setOutlineThickness(1.f);
-    userInputBox.setOutlineColor(sf::Color::Black);
-    window.draw(userInputBox);
+	sf::RectangleShape userInputBox(sf::Vector2f(170, 175));
+	userInputBox.setPosition(winSize.x - 190, 60);
+	userInputBox.setFillColor(sf::Color(200, 200, 200));
+	userInputBox.setOutlineThickness(1.f);
+	userInputBox.setOutlineColor(sf::Color::Black);
+	window.draw(userInputBox);
 
-    // Display user input array information
-    ImGui::SetNextWindowPos(ImVec2(winSize.x - 185, 25));
-    ImGui::SetNextWindowSize(ImVec2(160, 165));
-    ImGui::Begin("User Input Array", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
-    ImGui::TextUnformatted("Array Size:");
-    ImGui::SliderInt("", &array_size, 10, 100);
-    ImGui::Dummy(ImVec2(0, 10)); // Add space
+	ImGui::SetNextWindowPos(ImVec2(winSize.x - 185, 65));
+	ImGui::SetNextWindowSize(ImVec2(160, 165));
+	ImGui::Begin("User Input Array", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
+	ImGui::TextUnformatted("Array Size:");
+	ImGui::SliderInt("", &array_size, 10, 100);
+	ImGui::Dummy(ImVec2(0, 10));
 
-    // Input section for array elements
-    ImGui::InputText("Input", userInputArray, IM_ARRAYSIZE(userInputArray));
-    ImGui::Dummy(ImVec2(0, 10)); // Add space
+	ImGui::InputText("Input", userInputArray, IM_ARRAYSIZE(userInputArray));
+	ImGui::Dummy(ImVec2(0, 10));
 
-    if (ImGui::Button("Generate Array")) {
-        // Parse the input text to extract integers
-        std::vector<int> arrayElements;
-        std::istringstream iss(userInputArray);
-        int number;
-        while (iss >> number) {
-            arrayElements.push_back(number);
-        }
+	if (ImGui::Button("Generate", ImVec2(140, 30))) {
+		std::vector<int> inputArray;
+		std::stringstream ss(userInputArray);
+		int value;
+		while (ss >> value) {
+			inputArray.push_back(value);
+			if (ss.peek() == ',') ss.ignore();
+		}
+		generateArrayFromInput(inputArray);
+	}
 
-        // Generate array from input elements
-        generateArrayFromInput(arrayElements);
-    }
-    ImGui::Dummy(ImVec2(0, 10)); // Add space
-
-    if (ImGui::Button("Sort")) {
-        sorting = true;
-        delay = 3000 / array_size;
-        std::thread sortThread(insertionSort);
-        sortThread.detach();
-    }
-
-    ImGui::End();
-
-    // Randomize button outside and to the left of the box
-    ImGui::SetNextWindowPos(ImVec2(winSize.x - 340, 25)); 
-    ImGui::SetNextWindowSize(ImVec2(130, 35)); 
-    ImGui::Begin("Randomize Button", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
-    if (ImGui::Button("Randomize Array")) {
-        generateArray(array_size);
-    }
-    ImGui::End();
+	/*    if (ImGui::Button("Use Input", ImVec2(140, 30))) {
+		  std::vector<int> inputArray;
+		  std::istringstream iss(userInputArray);
+		  int num;
+		  while (iss >> num) {
+		  inputArray.push_back(num);
+		  }
+		  if (!inputArray.empty()) {
+		  generateArrayFromInput(inputArray);
+		  }
+		  }*/
+	ImGui::End();
 }
 
-void generateArrayFromInput(const std::vector<int>& inputArray) {
-    array = inputArray;
-    array_size = array.size();
+void displaySwapInfoBox(sf::RenderWindow& window) {
+	sf::Vector2u winSize = window.getSize();
+
+	sf::RectangleShape swapInfoBox(sf::Vector2f(170, 90));
+	swapInfoBox.setPosition(winSize.x - 190, 240);
+	swapInfoBox.setFillColor(sf::Color(200, 200, 200));
+	swapInfoBox.setOutlineThickness(1.f);
+	swapInfoBox.setOutlineColor(sf::Color::Black);
+	window.draw(swapInfoBox);
+
+	ImGui::SetNextWindowPos(ImVec2(winSize.x - 185, 245));
+	ImGui::SetNextWindowSize(ImVec2(160, 80));
+	ImGui::Begin("Swap Info", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
+	ImGui::TextUnformatted("Swap Information:");
+	ImGui::Text("%s",swapInfo);
+	ImGui::End();
+}
+
+void displayTimeComplexityBox(sf::RenderWindow& window) {
+	sf::Vector2u winSize = window.getSize();
+
+	sf::RectangleShape timeComplexityBox(sf::Vector2f(170, 90));
+	timeComplexityBox.setPosition(winSize.x - 190, 340);
+	timeComplexityBox.setFillColor(sf::Color(200, 200, 200));
+	timeComplexityBox.setOutlineThickness(1.f);
+	timeComplexityBox.setOutlineColor(sf::Color::Black);
+	window.draw(timeComplexityBox);
+
+	ImGui::SetNextWindowPos(ImVec2(winSize.x - 185, 345));
+	ImGui::SetNextWindowSize(ImVec2(160, 80));
+	ImGui::Begin("Time Complexity", nullptr, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove);
+	ImGui::TextUnformatted("Time Complexity:");
+	if (selectedSort == 0) {
+		ImGui::TextUnformatted("O(n log n)");
+	} else if (selectedSort == 1) {
+		ImGui::TextUnformatted("O(n^2)");
+	} else if (selectedSort == 2) {
+		ImGui::TextUnformatted("O(n log n)");
+	}
+	ImGui::End();
 }
 
 void insertionSort() {
@@ -272,6 +365,114 @@ void insertionSort() {
     compare_index1 = compare_index2 = -1;
 	isSorted = true;
 
+}
+
+void quickSort(int low, int high) {
+	if (low < high) {
+		int pi = partition(low, high);
+		quickSort(low, pi - 1);
+		quickSort(pi + 1, high);
+	}
+	compare_index1 = -1;
+	compare_index2 = -1;
+	isSorted = true;
+}
+
+int partition(int low, int high) {
+	int pivot = array[high];
+	int i = low - 1;
+	for (int j = low; j < high; j++) {
+		if (array[j] < pivot) {
+			i++;
+			std::swap(array[i], array[j]);
+			compare_index1 = i;
+			compare_index2 = j;
+			snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[i], array[j]);
+			std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+		}
+	}
+	std::swap(array[i + 1], array[high]);
+	compare_index1 = i + 1;
+	compare_index2 = high;
+	snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[i + 1], array[high]);
+	std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+	return i + 1;
+}
+
+void timSort() {
+	const int RUN = 32;
+	int n = array.size();
+	for (int i = 0; i < n; i += RUN) {
+		insertionSort(i, std::min((i + 31), (n - 1)));
+	}
+	for (int size = RUN; size < n; size = 2 * size) {
+		for (int left = 0; left < n; left += 2 * size) {
+			int mid = left + size - 1;
+			int right = std::min((left + 2 * size - 1), (n - 1));
+			merge(left, mid, right);
+		}
+	}
+	compare_index1 = -1;
+	compare_index2 = -1;
+	isSorted = true;
+}
+
+void insertionSort(int left, int right) {
+	for (int i = left + 1; i <= right; i++) {
+		int key = array[i];
+		int j = i - 1;
+		while (j >= left && array[j] > key) {
+			array[j + 1] = array[j];
+			j--;
+			compare_index1 = j + 1;
+			compare_index2 = j;
+			std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+		}
+		array[j + 1] = key;
+	}
+}
+
+void merge(int left, int mid, int right) {
+	int n1 = mid - left + 1;
+	int n2 = right - mid;
+	std::vector<int> L(n1), R(n2);
+	for (int i = 0; i < n1; i++)
+		L[i] = array[left + i];
+	for (int i = 0; i < n2; i++)
+		R[i] = array[mid + 1 + i];
+	int i = 0, j = 0, k = left;
+	while (i < n1 && j < n2) {
+		if (L[i] <= R[j]) {
+			array[k] = L[i];
+			i++;
+		} else {
+			array[k] = R[j];
+			j++;
+		}
+		snprintf(swapInfo, sizeof(swapInfo), "Merging %d and %d", L[i-1], R[j-1]);
+		compare_index1 = k;
+		compare_index2 = j;
+		k++;
+		std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+	}
+	while (i < n1) {
+		array[k] = L[i];
+		i++;
+		k++;
+		compare_index1 = k;
+		compare_index2 = i;
+		snprintf(swapInfo, sizeof(swapInfo), "Merging %d", L[i-1]);
+		std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+	}
+	while (j < n2) {
+		array[k] = R[j];
+		j++;
+		k++;
+		compare_index1 = k;
+		compare_index2 = j;
+		snprintf(swapInfo, sizeof(swapInfo), "Merging %d", R[j-1]);
+		std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+	}
 }
 
 
