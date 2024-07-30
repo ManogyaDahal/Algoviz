@@ -368,6 +368,7 @@ void insertionSort() {
 }
 
 void quickSort(int low, int high) {
+	isSorted = false; 
 	if (low < high) {
 		int pi = partition(low, high);
 		quickSort(low, pi - 1);
