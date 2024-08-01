@@ -417,21 +417,22 @@ void timSort() {
 	compare_index2 = -1;
 	isSorted = true;
 }
-
 void insertionSort(int left, int right) {
-	for (int i = left + 1; i <= right; i++) {
-		int key = array[i];
-		int j = i - 1;
-		while (j >= left && array[j] > key) {
-			array[j + 1] = array[j];
-			j--;
-			compare_index1 = j + 1;
-			compare_index2 = j;
-			std::this_thread::sleep_for(std::chrono::milliseconds(delay));
-		}
-		array[j + 1] = key;
-	}
+    for (int i = left + 1; i <= right; i++) {
+        int key = array[i];
+        int j = i - 1;
+        while (j >= left && array[j] > key) {
+            array[j + 1] = array[j];
+            j--;
+            compare_index1 = j + 1;
+            compare_index2 = j;
+            snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[j + 1], array[j]);
+            std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+        }
+        array[j + 1] = key;
+    }
 }
+
 
 void merge(int left, int mid, int right) {
 	int n1 = mid - left + 1;
