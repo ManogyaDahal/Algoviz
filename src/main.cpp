@@ -425,7 +425,7 @@ int partition(int low, int high) {
     std::swap(array[i + 1], array[high]);
     compare_index1 = i + 1;
     compare_index2 = high;
-    snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[i + 1], array[high]);
+   snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[i + 1], array[high]);
     std::this_thread::sleep_for(std::chrono::milliseconds(delay));
     return i + 1;
 }
@@ -465,26 +465,28 @@ void timSort() {
     compare_index1 = -1;
     compare_index2 = -1;
 }
-
 void insertionSort(int left, int right) {
     for (int i = left + 1; i <= right; i++) {
         int key = array[i];
         int j = i - 1;
         while (j >= left && array[j] > key) {
-            array[j + 1] = array[j];
-            j--;
-            compare_index1 = j + 1;
-            compare_index2 = j;
+            compare_index1 = j;
+            compare_index2 = j+1;
+
+	    std::swap(array[j] , array[j+1]); 
+
             snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[j + 1], array[j]);
             std::this_thread::sleep_for(std::chrono::milliseconds(delay));
-            if (!sorting) {
+
+	    j=j-1;
+	    if (!sorting) {
                 return; // exit the function
             }
         }
         array[j + 1] = key;
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay));
     }
 }
-
 void merge(int left, int mid, int right) {
     int n1 = mid - left + 1;
     int n2 = right - mid;
