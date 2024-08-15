@@ -13,7 +13,11 @@ The Sorting Algorithm Visualizer is a graphical tool designed to illustrate how 
 
 ### **Prerequisites**
 - Make sure you have a C++ compiler installed.
-
+- Install necessary SFML dependencies.
+```bash
+sudo apt install g++
+sudo apt-get install libsfml-dev
+```
 ### **Steps**
 
 1. Clone the repository:
