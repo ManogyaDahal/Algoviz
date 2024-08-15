@@ -192,66 +192,76 @@ void drawArray(sf::RenderWindow& window) {
 
 void ShowMenuBar(bool* p_open)
 {
-	ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x, 60), ImGuiCond_Always);
-	ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond_Always);
-	if (ImGui::Begin("Menu Bar", p_open, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse))
-	{
-		ImVec2 windowSize = ImGui::GetWindowSize();
-		float padding = 20.0f;
-		float margin = 20.0f;
-		float itemWidth = 150.0f;
-		float itemHeight = 30.0f;
-		float buttonWidth = 100.0f;
-		float totalItemsWidth = itemWidth * 3 + buttonWidth * 2;
+    ImGui::SetNextWindowSize(ImVec2(ImGui::GetIO().DisplaySize.x, 60), ImGuiCond_Always);
+    ImGui::SetNextWindowPos(ImVec2(0, 0), ImGuiCond_Always);
+    if (ImGui::Begin("Menu Bar", p_open, ImGuiWindowFlags_NoTitleBar | ImGuiWindowFlags_NoResize | ImGuiWindowFlags_NoMove | ImGuiWindowFlags_NoCollapse))
+    {
+        ImVec2 windowSize = ImGui::GetWindowSize();
+        float padding = 20.0f;
+        float margin = 20.0f;
+        float itemWidth = 150.0f;
+        float itemHeight = 30.0f;
+        float buttonWidth = 100.0f;
+        float totalItemsWidth = itemWidth * 3 + buttonWidth * 2;
 
-		float remainingWidth = windowSize.x - totalItemsWidth - 2 * margin;
-		float spacing = remainingWidth / 6.0f;
+        float remainingWidth = windowSize.x - totalItemsWidth - 2 * margin;
+        float spacing = remainingWidth / 6.0f;
 
-		ImGui::SetCursorPos(ImVec2(margin, (60 - itemHeight) / 2));
-		ImGui::Text("SortVisualizer");
+        ImGui::SetCursorPos(ImVec2(margin, (60 - itemHeight) / 2));
+        ImGui::Text("SortVisualizer");
 
-		ImGui::SameLine();
-		ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + spacing);
-		const char* items[] = { "Quick Sort", "Insertion Sort", "Tim Sort" };
-		ImGui::PushItemWidth(itemWidth);
-		ImGui::Combo("##Combo", &selectedSort, items, IM_ARRAYSIZE(items));
-		ImGui::PopItemWidth();
+        ImGui::SameLine();
+        ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + spacing);
+        const char* items[] = { "Quick Sort", "Insertion Sort", "Tim Sort" };
+        ImGui::PushItemWidth(itemWidth);
+        ImGui::Combo("##Combo", &selectedSort, items, IM_ARRAYSIZE(items));
+        ImGui::PopItemWidth();
 
-		ImGui::SameLine();
-		ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + itemWidth + spacing * 2);
-		ImGui::Text("Delay:");
-		ImGui::SameLine();
-		ImGui::PushItemWidth(100);
-		ImGui::SliderInt("##delay", &delay, 1, 1000);
-		ImGui::PopItemWidth();
+        ImGui::SameLine();
+        ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + itemWidth + spacing * 2);
+        ImGui::Text("Delay:");
+        ImGui::SameLine();
+        ImGui::PushItemWidth(100);
+        ImGui::SliderInt("##delay", &delay, 1, 1000);
+        ImGui::PopItemWidth();
 
-		ImGui::SameLine();
-		ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + itemWidth * 2 + spacing * 3);
-		if (ImGui::Button("Randomize", ImVec2(buttonWidth, itemHeight))) {
-			generateArray(array_size);
-		}
+        ImGui::SameLine();
+        ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + itemWidth * 2 + spacing * 3);
+        if (ImGui::Button("Randomize", ImVec2(buttonWidth, itemHeight))) {
+            generateArray(array_size);
+        }
 
-		ImGui::SameLine();
-		ImGui::SetCursorPosX(windowSize.x - margin - buttonWidth);
-		if (ImGui::Button("Start", ImVec2(buttonWidth, itemHeight))) {
-			sorting = true;
-			//            delay = 3000 / array_size;
-			std::thread sortThread;
-			if (selectedSort == 0) {
-				sortThread = std::thread(quickSort, 0, array.size() - 1);
-			} else if (selectedSort == 1) {
-				sortThread = std::thread([]{insertionSort();});
-			} else if (selectedSort == 2) {
-				sortThread = std::thread(timSort);
-			}
-			sortThread.detach();
-		}
+        ImGui::SameLine();
+        ImGui::SetCursorPosX(windowSize.x - margin - buttonWidth - buttonWidth - spacing);
+        if (ImGui::Button("Start", ImVec2(buttonWidth, itemHeight))) {
+            sorting = true;
+            //            delay = 3000 / array_size;
+            std::thread sortThread;
+            if (selectedSort == 0) {
+                sortThread = std::thread(quickSort, 0, array.size() - 1);
+            } else if (selectedSort == 1) {
+                sortThread = std::thread([]{insertionSort();});
+            } else if (selectedSort == 2) {
+                sortThread = std::thread(timSort);
+            }
+            sortThread.detach();
+        }
 
-		ImGui::SetCursorPos(ImVec2(margin, (60 - itemHeight) / 2 + itemHeight + 10));
-	}
-	ImGui::End();
+        ImGui::SameLine();
+        ImGui::SetCursorPosX(windowSize.x - margin - buttonWidth);
+        if (ImGui::Button("Stop", ImVec2(buttonWidth, itemHeight))) {
+            sorting = false;
+            isSorted = false;
+            compare_index1 = -1;
+            compare_index2 = -1;
+            memset(swapInfo, 0, sizeof(swapInfo)); // Clear swap information
+            memset(userInputArray, 0, sizeof(userInputArray)); // Clear user input array
+        }
+
+        ImGui::SetCursorPos(ImVec2(margin, (60 - itemHeight) / 2 + itemHeight + 10));
+    }
+    ImGui::End();
 }
-
 
 void displayUserInputBox(sf::RenderWindow& window) {
 	sf::Vector2u winSize = window.getSize();
@@ -356,68 +366,104 @@ void insertionSort() {
             snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[j + 1], array[j]);
 
             std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+            if (!sorting) {
+                return; // exit the function
+            }
         }
         array[j + 1] = key;
 
         std::this_thread::sleep_for(std::chrono::milliseconds(delay));
     }
 
+    isSorted = true;
     sorting = false;
     compare_index1 = compare_index2 = -1;
-	isSorted = true;
-
 }
 
 void quickSort(int low, int high) {
-	isSorted = false; 
-	if (low < high) {
-		int pi = partition(low, high);
-		quickSort(low, pi - 1);
-		quickSort(pi + 1, high);
-	}
-	compare_index1 = -1;
-	compare_index2 = -1;
-	isSorted = true;
+    isSorted = false; 
+    if (!sorting) {
+        isSorted = false;
+        compare_index1 = -1;
+        compare_index2 = -1;
+        return; // exit the function
+    }
+    if (low < high) {
+        int pi = partition(low, high);
+        if (pi == -1) {
+            return; // exit the function
+        }
+        quickSort(low, pi - 1);
+        quickSort(pi + 1, high);
+    }
+    isSorted = true;
+    compare_index1 = -1;
+    compare_index2 = -1;
 }
 
 int partition(int low, int high) {
-	int pivot = array[high];
-	int i = low - 1;
-	for (int j = low; j < high; j++) {
-		if (array[j] < pivot) {
-			i++;
-			std::swap(array[i], array[j]);
-			compare_index1 = i;
-			compare_index2 = j;
-			snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[i], array[j]);
-			std::this_thread::sleep_for(std::chrono::milliseconds(delay));
-		}
-	}
-	std::swap(array[i + 1], array[high]);
-	compare_index1 = i + 1;
-	compare_index2 = high;
-	snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[i + 1], array[high]);
-	std::this_thread::sleep_for(std::chrono::milliseconds(delay));
-	return i + 1;
+    int pivot = array[high];
+    int i = low - 1;
+    for (int j = low; j < high; j++) {
+        if (!sorting) {
+            return -1; // exit the function
+        }
+        if (array[j] < pivot) {
+            i++;
+            std::swap(array[i], array[j]);
+            compare_index1 = i;
+            compare_index2 = j;
+            snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[i], array[j]);
+            std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+        }
+    }
+    if (!sorting) {
+        return -1; // exit the function
+    }
+    std::swap(array[i + 1], array[high]);
+    compare_index1 = i + 1;
+    compare_index2 = high;
+    snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[i + 1], array[high]);
+    std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+    return i + 1;
 }
 
 void timSort() {
-	const int RUN = 32;
-	int n = array.size();
-	for (int i = 0; i < n; i += RUN) {
-		insertionSort(i, std::min((i + 31), (n - 1)));
-	}
-	for (int size = RUN; size < n; size = 2 * size) {
-		for (int left = 0; left < n; left += 2 * size) {
-			int mid = left + size - 1;
-			int right = std::min((left + 2 * size - 1), (n - 1));
-			merge(left, mid, right);
-		}
-	}
-	compare_index1 = -1;
-	compare_index2 = -1;
-	isSorted = true;
+    if (!sorting) {
+        isSorted = false;
+        compare_index1 = -1;
+        compare_index2 = -1;
+        return; // exit the function
+    }
+    const int RUN = 32;
+    int n = array.size();
+    for (int i = 0; i < n; i += RUN) {
+        insertionSort(i, std::min((i + 31), (n - 1)));
+        if (!sorting) {
+            isSorted = false;
+            compare_index1 = -1;
+            compare_index2 = -1;
+            return; // exit the function
+        }
+    }
+    for (int size = RUN; size < n; size = 2 * size) {
+        for (int left = 0; left < n; left += 2 * size) {
+            int mid = left + size - 1;
+            int right = std::min((left + 2 * size - 1), (n - 1));
+            merge(left, mid, right);
+            if (!sorting) {
+                isSorted = false;
+                compare_index1 = -1;
+                compare_index2 = -1;
+                return; // exit the function
+            }
+        }
+    }
+    isSorted = true;
+    compare_index1 = -1;
+    compare_index2 = -1;
 }
+
 void insertionSort(int left, int right) {
     for (int i = left + 1; i <= right; i++) {
         int key = array[i];
@@ -429,53 +475,62 @@ void insertionSort(int left, int right) {
             compare_index2 = j;
             snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[j + 1], array[j]);
             std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+            if (!sorting) {
+                return; // exit the function
+            }
         }
         array[j + 1] = key;
     }
 }
 
-
 void merge(int left, int mid, int right) {
-	int n1 = mid - left + 1;
-	int n2 = right - mid;
-	std::vector<int> L(n1), R(n2);
-	for (int i = 0; i < n1; i++)
-		L[i] = array[left + i];
-	for (int i = 0; i < n2; i++)
-		R[i] = array[mid + 1 + i];
-	int i = 0, j = 0, k = left;
-	while (i < n1 && j < n2) {
-		if (L[i] <= R[j]) {
-			array[k] = L[i];
-			i++;
-		} else {
-			array[k] = R[j];
-			j++;
-		}
-		snprintf(swapInfo, sizeof(swapInfo), "Merging %d and %d", L[i-1], R[j-1]);
-		compare_index1 = k;
-		compare_index2 = j;
-		k++;
-		std::this_thread::sleep_for(std::chrono::milliseconds(delay));
-	}
-	while (i < n1) {
-		array[k] = L[i];
-		i++;
-		k++;
-		compare_index1 = k;
-		compare_index2 = i;
-		snprintf(swapInfo, sizeof(swapInfo), "Merging %d", L[i-1]);
-		std::this_thread::sleep_for(std::chrono::milliseconds(delay));
-	}
-	while (j < n2) {
-		array[k] = R[j];
-		j++;
-		k++;
-		compare_index1 = k;
-		compare_index2 = j;
-		snprintf(swapInfo, sizeof(swapInfo), "Merging %d", R[j-1]);
-		std::this_thread::sleep_for(std::chrono::milliseconds(delay));
-	}
+    int n1 = mid - left + 1;
+    int n2 = right - mid;
+    std::vector<int> L(n1), R(n2);
+    for (int i = 0; i < n1; i++)
+        L[i] = array[left + i];
+    for (int i = 0; i < n2; i++)
+        R[i] = array[mid + 1 + i];
+    int i = 0, j = 0, k = left;
+    while (i < n1 && j < n2) {
+        if (L[i] <= R[j]) {
+            array[k] = L[i];
+            i++;
+        } else {
+            array[k] = R[j];
+            j++;
+        }
+        snprintf(swapInfo, sizeof(swapInfo), "Merging %d and %d", L[i-1], R[j-1]);
+        compare_index1 = k;
+        compare_index2 = j;
+        k++;
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+        if (!sorting) {
+            return; // exit the function
+        }
+    }
+    while (i < n1) {
+        array[k] = L[i];
+        i++;
+        k++;
+        compare_index1 = k;
+        compare_index2 = i;
+        snprintf(swapInfo, sizeof(swapInfo), "Merging %d", L[i-1]);
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+        if (!sorting) {
+            return; // exit the function
+        }
+    }
+    while (j < n2) {
+        array[k] = R[j];
+        j++;
+        k++;
+        compare_index1 = k;
+        compare_index2 = j;
+        snprintf(swapInfo, sizeof(swapInfo), "Merging %d", R[j-1]);
+        std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+        if (!sorting) {
+            return; // exit the function
+        }
+    }
 }
-
-
