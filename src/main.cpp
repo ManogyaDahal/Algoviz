@@ -116,6 +116,7 @@ void generateArray(int size) {
 }
 
 void generateArrayFromInput(const std::vector<int>& inputArray) {
+	isSorted=false; 
     array = inputArray;
     array_size = array.size();
 }
