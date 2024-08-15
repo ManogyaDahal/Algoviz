@@ -144,7 +144,7 @@ void drawArray(sf::RenderWindow& window) {
         sf::RectangleShape bar(sf::Vector2f(bar_width - 2.0f, bar_height));
         bar.setPosition(i * bar_width + margin, winSize.y - bar_height - margin);
 
-        if (i == compare_index1 || i == compare_index2) {
+        if ((i == compare_index1 || i == compare_index2) && (sorting==true)) {
             bar.setFillColor(sf::Color::Red);
         } else {
             bar.setFillColor(sf::Color::White);
@@ -229,6 +229,7 @@ void ShowMenuBar(bool* p_open)
         ImGui::SetCursorPosX(margin + ImGui::CalcTextSize("SortVisualizer").x + itemWidth * 2 + spacing * 3);
         if (ImGui::Button("Randomize", ImVec2(buttonWidth, itemHeight))) {
             generateArray(array_size);
+            sorting = false;
         }
 
         ImGui::SameLine();
