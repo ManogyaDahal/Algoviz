@@ -10,9 +10,9 @@
 #include <sstream>
 #include <mutex>
 
-const unsigned int MIN_WINDOW_WIDTH = 1902;
+const unsigned int MIN_WINDOW_WIDTH = 1920;
 const unsigned int MIN_WINDOW_HEIGHT = 1080;
-const int window_width = 1902;
+const int window_width = 1920;
 const int window_height = 1080;
 const int margin = 25; 
 
@@ -47,7 +47,7 @@ void merge(int left, int mid, int right);
 
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Algoviz - Sorting Algorithm Visualizer");
+    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Algoviz - Sorting Algorithm Visualizer", sf::Style::Fullscreen);
     window.setFramerateLimit(60);
 
 	if (!ImGui::SFML::Init(window)) {
