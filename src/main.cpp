@@ -360,13 +360,14 @@ void insertionSort() {
         while (j >= 0 && array[j] > key) {
             compare_index1 = j;
             compare_index2 = j + 1;
-            array[j + 1] = array[j];
-            j = j - 1;
+	    std::swap(array[j], array[j+1]); 
 
-            // Update swap information
             snprintf(swapInfo, sizeof(swapInfo), "Swapping %d with %d", array[j + 1], array[j]);
 
+
             std::this_thread::sleep_for(std::chrono::milliseconds(delay));
+
+            j = j - 1;
             if (!sorting) {
                 return; // exit the function
             }
@@ -376,9 +377,9 @@ void insertionSort() {
         std::this_thread::sleep_for(std::chrono::milliseconds(delay));
     }
 
-    isSorted = true;
     sorting = false;
     compare_index1 = compare_index2 = -1;
+    isSorted = true;
 }
 
 void quickSort(int low, int high) {
