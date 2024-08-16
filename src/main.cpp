@@ -42,16 +42,6 @@ int main() {
 
 			if (event.type == sf::Event::Closed)
 				window.close();
-
-			if (event.type == sf::Event::Resized)
-			{
-				if (event.size.width < MIN_WINDOW_WIDTH || event.size.height < MIN_WINDOW_HEIGHT)
-				{
-					unsigned int newWidth = event.size.width < MIN_WINDOW_WIDTH ? MIN_WINDOW_WIDTH : event.size.width;
-					unsigned int newHeight = event.size.height < MIN_WINDOW_HEIGHT ? MIN_WINDOW_HEIGHT : event.size.height;
-					window.setSize(sf::Vector2u(newWidth, newHeight));
-				}
-			}
 		}
 
 		ImGui::SFML::Update(window, deltaClock.restart());
