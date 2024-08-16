@@ -48,7 +48,7 @@ void ShowMenuBar(bool* p_open) {
         }
 
         ImGui::SameLine();
-        ImGui::SetCursorPosX(windowSize.x - margin - buttonWidth);
+        ImGui::SetCursorPosX(windowSize.x - margin - buttonWidth -buttonWidth -spacing);
         if (ImGui::Button("Start", ImVec2(buttonWidth, itemHeight))) {
             sorting = true;
             std::thread sortThread;
@@ -60,6 +60,16 @@ void ShowMenuBar(bool* p_open) {
                 sortThread = std::thread(timSort);
             }
             sortThread.detach();
+        }
+                ImGui::SameLine();
+        ImGui::SetCursorPosX(windowSize.x - margin - buttonWidth);
+        if (ImGui::Button("Stop", ImVec2(buttonWidth, itemHeight))) {
+            sorting = false;
+            isSorted = false;
+            compare_index1 = -1;
+            compare_index2 = -1;
+            memset(swapInfo, 0, sizeof(swapInfo)); 
+            memset(userInputArray, 0, sizeof(userInputArray)); 
         }
 
         ImGui::SetCursorPos(ImVec2(margin, (60 - itemHeight) / 2 + itemHeight + 10));
