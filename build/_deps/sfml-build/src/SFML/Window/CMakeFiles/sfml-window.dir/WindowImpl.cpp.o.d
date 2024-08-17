@@ -1,12 +1,12 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o: \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/WindowImpl.cpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/WindowImpl.cpp \
  /usr/include/stdc-predef.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/WindowImpl.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/String.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/WindowImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/String.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
  /usr/include/c++/14.2.1/algorithm \
  /usr/include/c++/14.2.1/bits/stl_algobase.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -157,30 +157,30 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o: \
  /usr/include/libintl.h /usr/include/c++/14.2.1/bits/codecvt.h \
  /usr/include/c++/14.2.1/bits/locale_facets_nonio.tcc \
  /usr/include/c++/14.2.1/bits/locale_conv.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Utf.inl \
  /usr/include/c++/14.2.1/iterator \
  /usr/include/c++/14.2.1/bits/stream_iterator.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/String.inl \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/CursorImpl.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/CursorImpl.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Cursor.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/WindowStyle.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/String.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/CursorImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/CursorImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Cursor.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/WindowStyle.hpp \
  /usr/include/X11/Xlib.h /usr/include/X11/X.h \
  /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Event.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Sensor.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Time.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/JoystickImpl.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/JoystickImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Event.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Sensor.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector3.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector3.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Time.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/JoystickImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/JoystickImpl.hpp \
  /usr/include/linux/input.h /usr/include/sys/time.h \
  /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
  /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
@@ -193,23 +193,23 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o: \
  /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
  /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
  /usr/include/linux/input-event-codes.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/SensorImpl.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/SensorImpl.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/SensorImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/SensorImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
  /usr/include/c++/14.2.1/vector \
  /usr/include/c++/14.2.1/bits/stl_uninitialized.h \
  /usr/include/c++/14.2.1/bits/stl_vector.h \
  /usr/include/c++/14.2.1/bits/stl_bvector.h \
  /usr/include/c++/14.2.1/bits/vector.tcc \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Clock.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Clock.hpp \
  /usr/include/c++/14.2.1/queue /usr/include/c++/14.2.1/deque \
  /usr/include/c++/14.2.1/bits/stl_deque.h \
  /usr/include/c++/14.2.1/bits/deque.tcc \
@@ -220,9 +220,9 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o: \
  /usr/include/c++/14.2.1/bits/stl_set.h \
  /usr/include/c++/14.2.1/bits/stl_multiset.h \
  /usr/include/c++/14.2.1/bits/erase_if.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/JoystickManager.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/SensorManager.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Sleep.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/JoystickManager.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/SensorManager.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Sleep.hpp \
  /usr/include/c++/14.2.1/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
@@ -242,9 +242,9 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/WindowImpl.cpp.o: \
  /usr/include/c++/14.2.1/tr1/poly_hermite.tcc \
  /usr/include/c++/14.2.1/tr1/poly_laguerre.tcc \
  /usr/include/c++/14.2.1/tr1/riemann_zeta.tcc \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/WindowImplX11.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/WindowImplX11.hpp \
  /usr/include/X11/extensions/Xrandr.h /usr/include/X11/extensions/randr.h \
  /usr/include/X11/extensions/Xrender.h /usr/include/X11/Xutil.h \
  /usr/include/X11/keysym.h /usr/include/X11/keysymdef.h \
  /usr/include/X11/extensions/render.h /usr/include/X11/Xdefs.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/VulkanImplX11.hpp
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/VulkanImplX11.hpp

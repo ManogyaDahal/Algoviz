@@ -32,13 +32,6 @@ set(IMGUI_SFML_FIND_SFML OFF)
 set(IMGUI_SFML_IMGUI_DEMO ON)
 FetchContent_MakeAvailable(imgui-sfml)
 
-FetchContent_Declare(
-    ImPlot
-    GIT_REPOSITORY https://github.com/epezent/implot
-    GIT_TAG v0.16
-)
-FetchContent_MakeAvailable(ImPlot)
-
 add_executable(main src/main.cpp src/gui.cpp src/global.cpp src/arrayinfo.cpp src/sorting.cpp)
 
 target_link_libraries(
@@ -46,7 +39,7 @@ target_link_libraries(
     sfml-graphics sfml-system sfml-window ImGui-SFML::ImGui-SFML
 )
 
-target_include_directories(main PRIVATE 
+target_include_directories(main PRIVATE
 	${CMAKE_SOURCE_DIR}/include)
 
 target_compile_features(main PRIVATE cxx_std_17)

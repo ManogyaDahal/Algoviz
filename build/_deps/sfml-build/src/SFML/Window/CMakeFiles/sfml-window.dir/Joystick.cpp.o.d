@@ -1,12 +1,12 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o: \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Joystick.cpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Joystick.cpp \
  /usr/include/stdc-predef.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/String.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Joystick.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/String.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
  /usr/include/c++/14.2.1/algorithm \
  /usr/include/c++/14.2.1/bits/stl_algobase.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -157,13 +157,13 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o: \
  /usr/include/libintl.h /usr/include/c++/14.2.1/bits/codecvt.h \
  /usr/include/c++/14.2.1/bits/locale_facets_nonio.tcc \
  /usr/include/c++/14.2.1/bits/locale_conv.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Utf.inl \
  /usr/include/c++/14.2.1/iterator \
  /usr/include/c++/14.2.1/bits/stream_iterator.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/String.inl \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/JoystickManager.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/JoystickImpl.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/JoystickImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/String.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/JoystickManager.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/JoystickImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/JoystickImpl.hpp \
  /usr/include/linux/input.h /usr/include/sys/time.h \
  /usr/include/sys/ioctl.h /usr/include/bits/ioctls.h \
  /usr/include/asm/ioctls.h /usr/include/asm-generic/ioctls.h \
@@ -176,4 +176,4 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Joystick.cpp.o: \
  /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
  /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
  /usr/include/linux/input-event-codes.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp

@@ -57,10 +57,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/manogya/group_proj/testing
+CMAKE_SOURCE_DIR = /home/manogya/group_proj/Sorting-algorithm-visualizer
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/manogya/group_proj/testing/build
+CMAKE_BINARY_DIR = /home/manogya/group_proj/Sorting-algorithm-visualizer/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Run CPack packaging tool for source..."
-	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/manogya/group_proj/testing/build/CPackSourceConfig.cmake
+	/usr/bin/cpack --config ./CPackSourceConfig.cmake /home/manogya/group_proj/Sorting-algorithm-visualizer/build/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,9 +152,9 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/manogya/group_proj/testing/build/CMakeFiles /home/manogya/group_proj/testing/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/manogya/group_proj/Sorting-algorithm-visualizer/build/CMakeFiles /home/manogya/group_proj/Sorting-algorithm-visualizer/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/manogya/group_proj/testing/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/manogya/group_proj/Sorting-algorithm-visualizer/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -246,6 +246,78 @@ ImGui-SFML/fast:
 	$(MAKE) $(MAKESILENT) -f _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build.make _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/build
 .PHONY : ImGui-SFML/fast
 
+src/arrayinfo.o: src/arrayinfo.cpp.o
+.PHONY : src/arrayinfo.o
+
+# target to build an object file
+src/arrayinfo.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/arrayinfo.cpp.o
+.PHONY : src/arrayinfo.cpp.o
+
+src/arrayinfo.i: src/arrayinfo.cpp.i
+.PHONY : src/arrayinfo.i
+
+# target to preprocess a source file
+src/arrayinfo.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/arrayinfo.cpp.i
+.PHONY : src/arrayinfo.cpp.i
+
+src/arrayinfo.s: src/arrayinfo.cpp.s
+.PHONY : src/arrayinfo.s
+
+# target to generate assembly for a file
+src/arrayinfo.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/arrayinfo.cpp.s
+.PHONY : src/arrayinfo.cpp.s
+
+src/global.o: src/global.cpp.o
+.PHONY : src/global.o
+
+# target to build an object file
+src/global.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/global.cpp.o
+.PHONY : src/global.cpp.o
+
+src/global.i: src/global.cpp.i
+.PHONY : src/global.i
+
+# target to preprocess a source file
+src/global.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/global.cpp.i
+.PHONY : src/global.cpp.i
+
+src/global.s: src/global.cpp.s
+.PHONY : src/global.s
+
+# target to generate assembly for a file
+src/global.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/global.cpp.s
+.PHONY : src/global.cpp.s
+
+src/gui.o: src/gui.cpp.o
+.PHONY : src/gui.o
+
+# target to build an object file
+src/gui.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gui.cpp.o
+.PHONY : src/gui.cpp.o
+
+src/gui.i: src/gui.cpp.i
+.PHONY : src/gui.i
+
+# target to preprocess a source file
+src/gui.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gui.cpp.i
+.PHONY : src/gui.cpp.i
+
+src/gui.s: src/gui.cpp.s
+.PHONY : src/gui.s
+
+# target to generate assembly for a file
+src/gui.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/gui.cpp.s
+.PHONY : src/gui.cpp.s
+
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
@@ -270,6 +342,30 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/sorting.o: src/sorting.cpp.o
+.PHONY : src/sorting.o
+
+# target to build an object file
+src/sorting.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sorting.cpp.o
+.PHONY : src/sorting.cpp.o
+
+src/sorting.i: src/sorting.cpp.i
+.PHONY : src/sorting.i
+
+# target to preprocess a source file
+src/sorting.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sorting.cpp.i
+.PHONY : src/sorting.cpp.i
+
+src/sorting.s: src/sorting.cpp.s
+.PHONY : src/sorting.s
+
+# target to generate assembly for a file
+src/sorting.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/sorting.cpp.s
+.PHONY : src/sorting.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -289,9 +385,21 @@ help:
 	@echo "... sfml-graphics"
 	@echo "... sfml-system"
 	@echo "... sfml-window"
+	@echo "... src/arrayinfo.o"
+	@echo "... src/arrayinfo.i"
+	@echo "... src/arrayinfo.s"
+	@echo "... src/global.o"
+	@echo "... src/global.i"
+	@echo "... src/global.s"
+	@echo "... src/gui.o"
+	@echo "... src/gui.i"
+	@echo "... src/gui.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/sorting.o"
+	@echo "... src/sorting.i"
+	@echo "... src/sorting.s"
 .PHONY : help
 
 

@@ -1,16 +1,16 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.o: \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Context.cpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Context.cpp \
  /usr/include/stdc-predef.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Context.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/GlContext.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/ThreadLocal.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Context.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/GlContext.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/ThreadLocal.hpp \
  /usr/include/c++/14.2.1/cstdlib \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -42,4 +42,4 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Context.cpp.o: \
  /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h \
  /usr/include/c++/14.2.1/bits/std_abs.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/ThreadLocalPtr.inl

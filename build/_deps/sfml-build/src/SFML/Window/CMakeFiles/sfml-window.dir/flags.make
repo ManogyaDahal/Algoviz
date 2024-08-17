@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DSFML_STATIC
 
-CXX_INCLUDES = -I/home/manogya/group_proj/testing/build/_deps/sfml-src/include -I/home/manogya/group_proj/testing/build/_deps/sfml-src/src -I/home/manogya/group_proj/testing/build/_deps/sfml-src/extlibs/headers/vulkan -isystem /home/manogya/group_proj/testing/build/_deps/sfml-src/extlibs/headers/glad/include
+CXX_INCLUDES = -I/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include -I/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src -I/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/extlibs/headers/vulkan -isystem /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/extlibs/headers/glad/include
 
 CXX_FLAGS = -O3 -DNDEBUG -fvisibility=hidden
 

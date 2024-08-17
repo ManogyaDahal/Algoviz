@@ -1,15 +1,15 @@
 _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.o: \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Graphics/VertexArray.cpp \
  /usr/include/stdc-predef.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/VertexArray.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/VertexArray.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Vertex.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/PrimitiveType.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Rect.hpp \
  /usr/include/c++/14.2.1/algorithm \
  /usr/include/c++/14.2.1/bits/stl_algobase.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -72,11 +72,11 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.
  /usr/include/c++/14.2.1/bits/std_abs.h \
  /usr/include/c++/14.2.1/pstl/glue_algorithm_defs.h \
  /usr/include/c++/14.2.1/pstl/execution_defs.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Drawable.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Transform.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Rect.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Drawable.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/RenderStates.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/BlendMode.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Transform.hpp \
  /usr/include/c++/14.2.1/vector \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/bits/allocator.h \
@@ -101,7 +101,7 @@ _deps/sfml-build/src/SFML/Graphics/CMakeFiles/sfml-graphics.dir/VertexArray.cpp.
  /usr/include/c++/14.2.1/bits/uses_allocator.h \
  /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
  /usr/include/c++/14.2.1/tuple \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/View.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Export.hpp
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/RenderTarget.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/View.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Export.hpp

@@ -1,18 +1,18 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o: \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/InputImpl.cpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/InputImpl.cpp \
  /usr/include/stdc-predef.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Cursor.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Window.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/ContextSettings.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/GlResource.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/NonCopyable.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/WindowBase.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Cursor.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/VideoMode.hpp \
  /usr/include/c++/14.2.1/vector \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -69,19 +69,19 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o
  /usr/include/c++/14.2.1/bits/uses_allocator.h \
  /usr/include/c++/14.2.1/bits/uses_allocator_args.h \
  /usr/include/c++/14.2.1/tuple \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdint.h \
  /usr/include/stdint.h /usr/include/bits/libc-header-start.h \
  /usr/include/bits/types.h /usr/include/bits/typesizes.h \
  /usr/include/bits/time64.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/WindowStyle.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Clock.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Time.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/String.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/WindowStyle.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Clock.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Time.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/String.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Utf.hpp \
  /usr/include/c++/14.2.1/algorithm \
  /usr/include/c++/14.2.1/bits/stl_algo.h \
  /usr/include/c++/14.2.1/bits/algorithmfwd.h \
@@ -177,15 +177,15 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/InputImpl.cpp.o
  /usr/include/libintl.h /usr/include/c++/14.2.1/bits/codecvt.h \
  /usr/include/c++/14.2.1/bits/locale_facets_nonio.tcc \
  /usr/include/c++/14.2.1/bits/locale_conv.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Utf.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Utf.inl \
  /usr/include/c++/14.2.1/iterator \
  /usr/include/c++/14.2.1/bits/stream_iterator.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/String.inl \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/InputImpl.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/String.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/InputImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Keyboard.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Mouse.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
  /usr/include/X11/Xlib.h /usr/include/X11/X.h \
  /usr/include/X11/Xfuncproto.h /usr/include/X11/Xosdefs.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/KeyboardImpl.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/KeyboardImpl.hpp \
  /usr/include/X11/keysym.h /usr/include/X11/keysymdef.h

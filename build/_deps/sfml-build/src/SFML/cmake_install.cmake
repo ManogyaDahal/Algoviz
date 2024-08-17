@@ -1,4 +1,4 @@
-# Install script for directory: /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML
+# Install script for directory: /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,9 +44,9 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/manogya/group_proj/testing/build/_deps/sfml-build/src/SFML/System/cmake_install.cmake")
-  include("/home/manogya/group_proj/testing/build/_deps/sfml-build/src/SFML/Window/cmake_install.cmake")
-  include("/home/manogya/group_proj/testing/build/_deps/sfml-build/src/SFML/Graphics/cmake_install.cmake")
+  include("/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-build/src/SFML/System/cmake_install.cmake")
+  include("/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-build/src/SFML/Window/cmake_install.cmake")
+  include("/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-build/src/SFML/Graphics/cmake_install.cmake")
 
 endif()
 

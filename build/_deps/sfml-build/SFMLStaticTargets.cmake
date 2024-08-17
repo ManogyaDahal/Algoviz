@@ -51,7 +51,7 @@ add_library(sfml-system STATIC IMPORTED)
 
 set_target_properties(sfml-system PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/manogya/group_proj/testing/build/_deps/sfml-src/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:pthread>;\$<LINK_ONLY:rt>"
 )
 
@@ -60,7 +60,7 @@ add_library(sfml-window STATIC IMPORTED)
 
 set_target_properties(sfml-window PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/manogya/group_proj/testing/build/_deps/sfml-src/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include"
   INTERFACE_LINK_LIBRARIES "\$<LINK_ONLY:X11>;sfml-system;\$<LINK_ONLY:OpenGL>;\$<LINK_ONLY:UDev>;\$<LINK_ONLY:dl>"
 )
 
@@ -93,7 +93,7 @@ add_library(sfml-graphics STATIC IMPORTED)
 
 set_target_properties(sfml-graphics PROPERTIES
   INTERFACE_COMPILE_DEFINITIONS "SFML_STATIC"
-  INTERFACE_INCLUDE_DIRECTORIES "/home/manogya/group_proj/testing/build/_deps/sfml-src/include"
+  INTERFACE_INCLUDE_DIRECTORIES "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include"
   INTERFACE_LINK_LIBRARIES "sfml-window;\$<LINK_ONLY:Freetype>"
 )
 
@@ -109,21 +109,21 @@ set_target_properties(Freetype PROPERTIES
 set_property(TARGET sfml-system APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(sfml-system PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/home/manogya/group_proj/testing/build/_deps/sfml-build/lib/libsfml-system-s.a"
+  IMPORTED_LOCATION_RELEASE "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-build/lib/libsfml-system-s.a"
   )
 
 # Import target "sfml-window" for configuration "Release"
 set_property(TARGET sfml-window APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(sfml-window PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/home/manogya/group_proj/testing/build/_deps/sfml-build/lib/libsfml-window-s.a"
+  IMPORTED_LOCATION_RELEASE "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-build/lib/libsfml-window-s.a"
   )
 
 # Import target "sfml-graphics" for configuration "Release"
 set_property(TARGET sfml-graphics APPEND PROPERTY IMPORTED_CONFIGURATIONS RELEASE)
 set_target_properties(sfml-graphics PROPERTIES
   IMPORTED_LINK_INTERFACE_LANGUAGES_RELEASE "CXX"
-  IMPORTED_LOCATION_RELEASE "/home/manogya/group_proj/testing/build/_deps/sfml-build/lib/libsfml-graphics-s.a"
+  IMPORTED_LOCATION_RELEASE "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-build/lib/libsfml-graphics-s.a"
   )
 
 # This file does not depend on other imported targets which have

@@ -8,7 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/manogya/group_proj/testing/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/src/arrayinfo.cpp" "CMakeFiles/main.dir/src/arrayinfo.cpp.o" "gcc" "CMakeFiles/main.dir/src/arrayinfo.cpp.o.d"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/src/global.cpp" "CMakeFiles/main.dir/src/global.cpp.o" "gcc" "CMakeFiles/main.dir/src/global.cpp.o.d"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/src/gui.cpp" "CMakeFiles/main.dir/src/gui.cpp.o" "gcc" "CMakeFiles/main.dir/src/gui.cpp.o.d"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/src/main.cpp" "CMakeFiles/main.dir/src/main.cpp.o" "gcc" "CMakeFiles/main.dir/src/main.cpp.o.d"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/src/sorting.cpp" "CMakeFiles/main.dir/src/sorting.cpp.o" "gcc" "CMakeFiles/main.dir/src/sorting.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

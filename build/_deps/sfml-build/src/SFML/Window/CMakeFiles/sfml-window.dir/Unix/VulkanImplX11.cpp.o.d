@@ -1,11 +1,11 @@
 _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.cpp.o: \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/VulkanImplX11.cpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/VulkanImplX11.cpp \
  /usr/include/stdc-predef.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/VulkanImplX11.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/VulkanImplX11.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Vulkan.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Window/WindowHandle.hpp \
  /usr/include/c++/14.2.1/vector \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
@@ -68,7 +68,7 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.c
  /usr/include/bits/time64.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window/Unix/Display.hpp \
  /usr/include/X11/Xlib.h /usr/include/sys/types.h \
  /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
  /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
@@ -121,10 +121,10 @@ _deps/sfml-build/src/SFML/Window/CMakeFiles/sfml-window.dir/Unix/VulkanImplX11.c
  /usr/include/c++/14.2.1/bits/charconv.h \
  /usr/include/c++/14.2.1/bits/basic_string.tcc /usr/include/dlfcn.h \
  /usr/include/bits/dlfcn.h /usr/include/bits/dl_find_object.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/extlibs/headers/vulkan/vulkan.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/extlibs/headers/vulkan/vk_platform.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/extlibs/headers/vulkan/vulkan_core.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/extlibs/headers/vulkan/vulkan_xlib.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/extlibs/headers/vulkan/vulkan.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/extlibs/headers/vulkan/vk_platform.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/extlibs/headers/vulkan/vulkan_core.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/extlibs/headers/vulkan/vulkan_xlib.h \
  /usr/include/c++/14.2.1/map /usr/include/c++/14.2.1/bits/stl_tree.h \
  /usr/include/c++/14.2.1/ext/aligned_buffer.h \
  /usr/include/c++/14.2.1/bits/node_handle.h \

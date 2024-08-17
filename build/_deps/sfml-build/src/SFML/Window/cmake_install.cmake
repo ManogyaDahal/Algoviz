@@ -1,4 +1,4 @@
-# Install script for directory: /home/manogya/group_proj/testing/build/_deps/sfml-src/src/SFML/Window
+# Install script for directory: /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/src/SFML/Window
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,6 +43,6 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "devel" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/manogya/group_proj/testing/build/_deps/sfml-build/lib/libsfml-window-s.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-build/lib/libsfml-window-s.a")
 endif()
 

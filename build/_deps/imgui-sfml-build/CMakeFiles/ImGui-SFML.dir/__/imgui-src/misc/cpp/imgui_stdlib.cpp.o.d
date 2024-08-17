@@ -1,13 +1,13 @@
 _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/misc/cpp/imgui_stdlib.cpp.o: \
- /home/manogya/group_proj/testing/build/_deps/imgui-src/misc/cpp/imgui_stdlib.cpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/misc/cpp/imgui_stdlib.cpp \
  /usr/include/stdc-predef.h \
- /home/manogya/group_proj/testing/build/_deps/imgui-src/imgui.h \
- /home/manogya/group_proj/testing/build/_deps/imgui-sfml-src/imconfig-SFML.h \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/Config.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
- /home/manogya/group_proj/testing/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/imgui.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-src/imconfig-SFML.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Color.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Graphics/Export.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/Config.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector2.hpp \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include/SFML/System/Vector2.inl \
  /usr/include/c++/14.2.1/cstdint \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/14.2.1/x86_64-pc-linux-gnu/bits/os_defines.h \
@@ -23,15 +23,15 @@ _deps/imgui-sfml-build/CMakeFiles/ImGui-SFML.dir/__/imgui-src/misc/cpp/imgui_std
  /usr/include/bits/time64.h /usr/include/bits/wchar.h \
  /usr/include/bits/stdint-intn.h /usr/include/bits/stdint-uintn.h \
  /usr/include/bits/stdint-least.h \
- /home/manogya/group_proj/testing/build/_deps/imgui-sfml-src/imgui-SFML_export.h \
- /home/manogya/group_proj/testing/build/_deps/imgui-src/imconfig.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-src/imgui-SFML_export.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/imconfig.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/float.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stdarg.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/14.2.1/include/stddef.h \
  /usr/include/string.h /usr/include/bits/types/locale_t.h \
  /usr/include/bits/types/__locale_t.h /usr/include/strings.h \
  /usr/include/assert.h \
- /home/manogya/group_proj/testing/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h \
+ /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h \
  /usr/include/c++/14.2.1/string \
  /usr/include/c++/14.2.1/bits/requires_hosted.h \
  /usr/include/c++/14.2.1/bits/stringfwd.h \

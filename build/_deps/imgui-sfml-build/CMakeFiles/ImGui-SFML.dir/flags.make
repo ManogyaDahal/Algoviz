@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DIMGUI_USER_CONFIG=\"imconfig-SFML.h\" -DSFML_STATIC
 
-CXX_INCLUDES = -I/home/manogya/group_proj/testing/build/_deps/imgui-src -I/home/manogya/group_proj/testing/build/_deps/imgui-sfml-src -I/home/manogya/group_proj/testing/build/_deps/sfml-src/include
+CXX_INCLUDES = -I/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src -I/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-src -I/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/sfml-src/include
 
 CXX_FLAGS = -O3 -DNDEBUG
 

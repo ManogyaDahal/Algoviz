@@ -1,4 +1,4 @@
-# Install script for directory: /home/manogya/group_proj/testing/build/_deps/imgui-sfml-src
+# Install script for directory: /home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -43,21 +43,21 @@ if(NOT DEFINED CMAKE_OBJDUMP)
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/manogya/group_proj/testing/build/_deps/imgui-sfml-build/libImGui-SFML.a")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-build/libImGui-SFML.a")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE FILE FILES
-    "/home/manogya/group_proj/testing/build/_deps/imgui-sfml-src/imgui-SFML.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-sfml-src/imgui-SFML_export.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-sfml-src/imconfig-SFML.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-src/imconfig.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-src/imgui.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-src/imgui_internal.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-src/imstb_rectpack.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-src/imstb_textedit.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-src/imstb_truetype.h"
-    "/home/manogya/group_proj/testing/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-src/imgui-SFML.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-src/imgui-SFML_export.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-src/imconfig-SFML.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/imconfig.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/imgui.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/imgui_internal.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/imstb_rectpack.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/imstb_textedit.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/imstb_truetype.h"
+    "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src/misc/cpp/imgui_stdlib.h"
     )
 endif()
 
@@ -65,7 +65,7 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake")
     file(DIFFERENT _cmake_export_file_changed FILES
          "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig.cmake"
-         "/home/manogya/group_proj/testing/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig.cmake")
+         "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig.cmake")
     if(_cmake_export_file_changed)
       file(GLOB _cmake_old_config_files "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML/ImGui-SFMLConfig-*.cmake")
       if(_cmake_old_config_files)
@@ -78,9 +78,9 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
     endif()
     unset(_cmake_export_file_changed)
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/home/manogya/group_proj/testing/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig.cmake")
   if(CMAKE_INSTALL_CONFIG_NAME MATCHES "^([Rr][Ee][Ll][Ee][Aa][Ss][Ee])$")
-    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/home/manogya/group_proj/testing/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig-release.cmake")
+    file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/cmake/ImGui-SFML" TYPE FILE FILES "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-sfml-build/CMakeFiles/Export/761a6a4c7704629aea6d1d08969b2ac8/ImGui-SFMLConfig-release.cmake")
   endif()
 endif()
 

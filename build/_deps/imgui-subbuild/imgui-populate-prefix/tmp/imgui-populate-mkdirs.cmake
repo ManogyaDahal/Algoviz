@@ -6,22 +6,22 @@ cmake_minimum_required(VERSION 3.5)
 # If CMAKE_DISABLE_SOURCE_CHANGES is set to true and the source directory is an
 # existing directory in our source tree, calling file(MAKE_DIRECTORY) on it
 # would cause a fatal error, even though it would be a no-op.
-if(NOT EXISTS "/home/manogya/group_proj/testing/build/_deps/imgui-src")
-  file(MAKE_DIRECTORY "/home/manogya/group_proj/testing/build/_deps/imgui-src")
+if(NOT EXISTS "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src")
+  file(MAKE_DIRECTORY "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-src")
 endif()
 file(MAKE_DIRECTORY
-  "/home/manogya/group_proj/testing/build/_deps/imgui-build"
-  "/home/manogya/group_proj/testing/build/_deps/imgui-subbuild/imgui-populate-prefix"
-  "/home/manogya/group_proj/testing/build/_deps/imgui-subbuild/imgui-populate-prefix/tmp"
-  "/home/manogya/group_proj/testing/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp"
-  "/home/manogya/group_proj/testing/build/_deps/imgui-subbuild/imgui-populate-prefix/src"
-  "/home/manogya/group_proj/testing/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-build"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/tmp"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src"
+  "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp"
 )
 
 set(configSubDirs )
 foreach(subDir IN LISTS configSubDirs)
-    file(MAKE_DIRECTORY "/home/manogya/group_proj/testing/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/${subDir}")
+    file(MAKE_DIRECTORY "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp/${subDir}")
 endforeach()
 if(cfgdir)
-  file(MAKE_DIRECTORY "/home/manogya/group_proj/testing/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp${cfgdir}") # cfgdir has leading slash
+  file(MAKE_DIRECTORY "/home/manogya/group_proj/Sorting-algorithm-visualizer/build/_deps/imgui-subbuild/imgui-populate-prefix/src/imgui-populate-stamp${cfgdir}") # cfgdir has leading slash
 endif()
