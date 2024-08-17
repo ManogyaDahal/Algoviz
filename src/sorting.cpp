@@ -23,7 +23,9 @@ void insertionSort() {
 
             j = j - 1;
             if (!sorting) {
-                return; // exit the function
+	isSorted=false;
+
+				return; // exit the function
             }
         }
         array[j + 1] = key;
@@ -52,7 +54,9 @@ void quickSort(int low, int high) {
         quickSort(low, pi - 1);
         quickSort(pi + 1, high);
     }
+	if(sorting){
     isSorted = true;
+	}
     compare_index1 = -1;
     compare_index2 = -1;
 }
@@ -62,6 +66,8 @@ int partition(int low, int high) {
     int i = low - 1;
     for (int j = low; j < high; j++) {
         if (!sorting) {
+				isSorted=false;
+
             return -1; // exit the function
         }
         if (array[j] < pivot) {
@@ -74,6 +80,8 @@ int partition(int low, int high) {
         }
     }
     if (!sorting) {
+	isSorted=false;
+
         return -1; // exit the function
     }
     std::swap(array[i + 1], array[high]);
@@ -134,6 +142,8 @@ void insertionSort(int left, int right) {
 
 	    j=j-1;
 	    if (!sorting) {
+	isSorted=false;
+			
                 return; // exit the function
             }
         }
@@ -164,6 +174,8 @@ void merge(int left, int mid, int right) {
         k++;
         std::this_thread::sleep_for(std::chrono::milliseconds(delay));
         if (!sorting) {
+	isSorted=false;
+
             return; // exit the function
         }
     }
@@ -176,6 +188,8 @@ void merge(int left, int mid, int right) {
         snprintf(swapInfo, sizeof(swapInfo), "Merging %d", L[i-1]);
         std::this_thread::sleep_for(std::chrono::milliseconds(delay));
         if (!sorting) {
+			
+	isSorted=false;
             return; // exit the function
         }
     }
@@ -188,6 +202,8 @@ void merge(int left, int mid, int right) {
         snprintf(swapInfo, sizeof(swapInfo), "Merging %d", R[j-1]);
         std::this_thread::sleep_for(std::chrono::milliseconds(delay));
         if (!sorting) {
+
+	isSorted=false;
             return; // exit the function
         }
     }
