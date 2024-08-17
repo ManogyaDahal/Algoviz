@@ -16,7 +16,7 @@
 
 
 int main() {
-    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Algoviz - Sorting Algorithm Visualizer", sf::Style::Default);
+    sf::RenderWindow window(sf::VideoMode(window_width, window_height), "Algoviz - Sorting Algorithm Visualizer", sf::Style::Fullscreen);
     window.setFramerateLimit(60);
 
 	if (!ImGui::SFML::Init(window)) {
