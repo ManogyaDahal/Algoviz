@@ -12,39 +12,53 @@ The Sorting Algorithm Visualizer is a graphical tool designed to illustrate how 
 ## Installation
 
 ### **Prerequisites**
-- Make sure you have a C++ compiler installed.
-- Install necessary SFML dependencies.
+- C++ compiler
+- make
+- Cmake
+- Sfml
 ```bash
+#Debian Based systems:
 sudo apt install g++
+sudo apt install make
 sudo apt-get install libsfml-dev
+
+#Arch Based systems:
+sudo pacman -S gcc 
+sudo pacman -S sfml
 ```
 ### **Steps**
 
-1. Clone the repository:
+- Clone the repository:
 
 ```bash
 https://github.com/ManogyaDahal/Sorting-algorithm-visualizer.git
 ```
 
-2. Navigate to the project directory:
-
+- Getting into project directory:
 ```bash
 cd Sorting-algorithm-visualizer
 ```
 
-3. Build the project using make:
+- To build the code
 ```bash
 make
 ```
 After these steps, the project should be built and ready to run.
-    
+### **Running**
+
+To run the code you can hit
+```bash
+./Algoviz
+
+#Or you can run:
+./build/bin/main
+```
+Then the code should be running.
+
 ## Features
-
-- Custom sized array 
-- 3 sorting algorithms
-
-
-## Demo
-
-Insert gif or link to demo
+- User input or Random value generator 
+- Adjusting the speed
+- Swap information viewer in realtime
+- Time complexity for each sort is shown
+- User has option to choose Three sort 
 
